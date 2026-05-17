@@ -1,0 +1,20 @@
+[runtime]
+mode = "paper"
+
+[deposit_wallet]
+# Provided public-ish builder API key identifier. Do not put API secret/private key here.
+builder_api_key = "019e33b9-871b-749b-81b6-d3844ae5a76a"
+# Deposit wallet address from Polymarket onboarding/docs flow.
+deposit_wallet_address = "0xc8dd2a8c0765160989ca5d3d432d74950a4e3952"
+live_trading_enabled = false
+# live_trading_ack must stay empty unless live trading is explicitly approved later.
+live_trading_ack = ""
+
+[strategy]
+name = "synthetic_hedge_v0"
+initial_trend_qty = 3
+initial_hedge_qty = 2
+crushed_price_threshold = 0.25
+volatility_threshold = 0.5
+max_imbalance_ratio = 3.0
+min_seconds_to_close = 60
